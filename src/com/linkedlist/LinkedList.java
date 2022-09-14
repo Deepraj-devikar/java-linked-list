@@ -213,26 +213,12 @@ public class LinkedList <Type extends Comparable<Type>> {
 	
 	public static void main(String[] args) {
 		System.out.println("Welcome to linked list program");
-		LinkedList linkedList = new LinkedList<Integer>();
-		linkedList.add(56);
-		linkedList.append(70);
-		linkedList.insert(1, 30);
-		System.out.println(linkedList);
-		// get index of element 30
-		int indexOf30 = linkedList.index(30);
-		// insert 40 one position after index position of 30
-		linkedList.insert(indexOf30 + 1, 40);
-		System.out.println(linkedList);
-		// check element 40 is found in linked list or not
-		if(linkedList.search(40)) {
-			System.out.println("Element 40 is found in linked list");
-			linkedList.remove(40);
-			System.out.println("Element 40 is removed from linked list");
-		} else {
-			System.out.println("Element 40 is not found in linked list");
-		}
-		System.out.println("Size of linked list "+linkedList.size());
-		System.out.println(linkedList);
+		SortedLinkedList sortedLinkedList = new SortedLinkedList<Integer>(SortedLinkedList.ASCENDING);
+		sortedLinkedList.add(56);
+		sortedLinkedList.add(30);
+		sortedLinkedList.add(40);
+		sortedLinkedList.add(70);
+		System.out.println(sortedLinkedList);
 	}
 
 }
