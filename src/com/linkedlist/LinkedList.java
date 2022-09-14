@@ -192,8 +192,8 @@ public class LinkedList <Type extends Comparable<Type>> {
 		System.out.println("Welcome to linked list program");
 		LinkedList linkedList = new LinkedList<Integer>();
 		linkedList.add(56);
-		linkedList.append(30);
 		linkedList.append(70);
+		linkedList.insert(1, 30);
 		System.out.println(linkedList);
 		
 		
