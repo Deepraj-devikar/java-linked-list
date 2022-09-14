@@ -218,8 +218,11 @@ public class LinkedList <Type extends Comparable<Type>> {
 		linkedList.append(70);
 		linkedList.insert(1, 30);
 		System.out.println(linkedList);
-		System.out.println(linkedList.popLast());
-		System.out.println(linkedList);
+		System.out.println(linkedList.search(30));
+		if(linkedList.search(30)) 
+			System.out.println("Element 30 found in linked list at position "+linkedList.index(30));
+		else 
+			System.out.println("Element 30 not found in linked list");
 	}
 
 }
