@@ -183,6 +183,14 @@ public class LinkedList <Type extends Comparable<Type>> {
 		}
 	}
 	
+	/*
+	 * return head item when linked list is not empty otherwise return null
+	 */
+	public Type headItem() {
+		if(isEmpty()) return null; // linked list is empty not have to return in linked list
+		else return head.item; // return item value where head is pointing
+	}
+	
 	public String toString() {
 		if(head != null) return head.toString();
 		else return null;
@@ -195,8 +203,9 @@ public class LinkedList <Type extends Comparable<Type>> {
 		linkedList.append(70);
 		linkedList.insert(1, 30);
 		System.out.println(linkedList);
-		
-		
+		System.out.println("Pop element "+linkedList.pop());
+		System.out.println("New head element "+linkedList.headItem());
+		System.out.println(linkedList);
 	}
 
 }
