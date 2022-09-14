@@ -223,6 +223,16 @@ public class LinkedList <Type extends Comparable<Type>> {
 		// insert 40 one position after index position of 30
 		linkedList.insert(indexOf30 + 1, 40);
 		System.out.println(linkedList);
+		// check element 40 is found in linked list or not
+		if(linkedList.search(40)) {
+			System.out.println("Element 40 is found in linked list");
+			linkedList.remove(40);
+			System.out.println("Element 40 is removed from linked list");
+		} else {
+			System.out.println("Element 40 is not found in linked list");
+		}
+		System.out.println("Size of linked list "+linkedList.size());
+		System.out.println(linkedList);
 	}
 
 }
