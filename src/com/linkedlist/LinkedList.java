@@ -156,10 +156,25 @@ public class LinkedList <Type extends Comparable<Type>> {
 	}
 	
 	/**
+	 * remove first element of linked list and return its value
+	 * @return head.item
+	 */
+	public Type pop() {
+		// store tail nodes item for return purpose
+		Type currentHeadItem = headItem();
+		if (currentHeadItem != null) {
+			// head node is not null remove head node from linked list
+			remove(headItem());
+			// return stored head nodes item
+			return currentHeadItem;
+		} else return null; // head nodes item is null
+	}
+	
+	/**
 	 * remove last element of linked list and return its value
 	 * @return tail.item
 	 */
-	public Type pop() {
+	public Type popLast() {
 		if(isEmpty()) return null; // linked list is empty not have to return in linked list
 		else if(size() == 1) {
 			// only one node in linked list head and tail both are pointing to that one element
@@ -203,7 +218,7 @@ public class LinkedList <Type extends Comparable<Type>> {
 		linkedList.append(70);
 		linkedList.insert(1, 30);
 		System.out.println(linkedList);
-		linkedList.remove(linkedList.headItem());
+		System.out.println(linkedList.pop());
 		System.out.println("New head element "+linkedList.headItem());
 		System.out.println(linkedList);
 	}
