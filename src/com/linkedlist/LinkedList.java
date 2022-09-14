@@ -191,10 +191,12 @@ public class LinkedList <Type extends Comparable<Type>> {
 	public static void main(String[] args) {
 		System.out.println("Welcome to linked list program");
 		LinkedList linkedList = new LinkedList<Integer>();
-		linkedList.add(56);
-		linkedList.add(30);
 		linkedList.add(70);
+		linkedList.add(30);
+		linkedList.add(56);
 		System.out.println(linkedList);
+		
+		
 	}
 
 }
